@@ -1,0 +1,10 @@
+<% @tasks.each do |task| %>
+  <h2><%= task.title %></h2>
+  <p><%= task.details %></p>
+  <p>task is completed: <%= task.completed %></p>
+  <%= link_to "See details!", task_path(task.id) %>
+<% end %>
+
+
+<p><%= link_to "Add new task!", new_task_path %></p>
+
